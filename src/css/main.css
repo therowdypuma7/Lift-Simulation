@@ -26,6 +26,10 @@ img, iframe { border: 0 }
     display: none;
 }
 
+.invisibleContent {
+    visibility: hidden;
+}
+
 .lift-sim-data__container {
     width: 500px;
     margin: 200px auto 0;
@@ -78,7 +82,18 @@ img, iframe { border: 0 }
     top: 50%;
     transform: translateY(-50%);
     left: 20px;
-    transition: transform 2s;
+    transition: transform;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.lift-simulator__lift--left-door,
+.lift-simulator__lift--right-door {
+    width: 49%;
+    height: 100%;
+    background-color: green;
+    transition: transform;
 }
 
 .lift-simulator__floor--btns {
